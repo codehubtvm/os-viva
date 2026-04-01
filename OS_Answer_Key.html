@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OS Answer Key</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:#222;padding:20px}
+  h1{text-align:center;color:#1a237e;font-size:1.8rem;margin-bottom:4px}
+  .subtitle{text-align:center;color:#555;margin-bottom:20px;font-size:.95rem}
+  .search-bar{display:flex;justify-content:center;margin-bottom:24px}
+  .search-bar input{width:100%;max-width:600px;padding:10px 16px;border-radius:24px;
+    border:1.5px solid #90caf9;font-size:1rem;outline:none;transition:.2s}
+  .search-bar input:focus{border-color:#1565c0;box-shadow:0 0 0 3px #bbdefb55}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;max-width:1400px;margin:0 auto}
+  .card{background:#fff;border-radius:10px;padding:14px 16px;
+    box-shadow:0 2px 8px #0001;border-left:4px solid #1565c0;transition:.2s}
+  .card:hover{box-shadow:0 4px 16px #0002;transform:translateY(-1px)}
+  .qnum{font-size:.75rem;color:#888;font-weight:600;margin-bottom:4px;letter-spacing:.5px}
+  .question{font-size:.9rem;font-weight:700;color:#1a237e;margin-bottom:8px;line-height:1.4}
+  .answer{font-size:.9rem;color:#1b5e20;background:#f1f8e9;border-radius:6px;
+    padding:6px 10px;line-height:1.4}
+  .tick{color:#2e7d32;font-weight:bold;margin-right:5px}
+  .hidden{display:none}
+  .count{text-align:center;margin-bottom:10px;color:#555;font-size:.9rem}
+  footer{text-align:center;margin-top:30px;color:#999;font-size:.8rem}
+</style>
+</head>
+<body>
+<h1>🖥️ Operating Systems — Complete Answer Key</h1>
+<p class="subtitle">All 150 Questions with Answers</p>
+<div class="search-bar">
+  <input type="text" id="search" placeholder="🔍  Search questions or answers..." oninput="filterCards()">
+</div>
+<p class="count" id="count">Showing 150 of 150 questions</p>
+<div class="grid" id="grid">
+
+    <div class="card">
+      <div class="qnum">Q1</div>
+      <div class="question">The shmget system call is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Create or locate a shared memory segment</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q2</div>
+      <div class="question">The file /proc/[pid]/stat is primarily used to retrieve:</div>
+      <div class="answer"><span class="tick">✔</span> Process statistics</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q3</div>
+      <div class="question">What does "D" indicate in the state column of the ps command?</div>
+      <div class="answer"><span class="tick">✔</span> Uninterruptible sleep (waiting for I/O)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q4</div>
+      <div class="question">Blocked processes state is usually indicated by:</div>
+      <div class="answer"><span class="tick">✔</span> D</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q5</div>
+      <div class="question">Which system call is used to create a Semaphore in Linux?</div>
+      <div class="answer"><span class="tick">✔</span> Both A and C (sem_init and sem_open)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q6</div>
+      <div class="question">When a mode switch occurs, where does the CPU find the address of the interrupt handler?</div>
+      <div class="answer"><span class="tick">✔</span> In the Interrupt Vector Table (IVT)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q7</div>
+      <div class="question">What is a "Page Fault"?</div>
+      <div class="answer"><span class="tick">✔</span> Accessing a page not currently in physical memory.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q8</div>
+      <div class="question">In the sequence pid = fork();, if pid is greater than 0, which process is currently executing that specific line?</div>
+      <div class="answer"><span class="tick">✔</span> The Parent Process</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q9</div>
+      <div class="question">In a Resource Allocation Graph, a directed edge from a process to a resource (Pi to Rj) signifies:</div>
+      <div class="answer"><span class="tick">✔</span> A Request edge</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q10</div>
+      <div class="question">The fork() system call creates a new:</div>
+      <div class="answer"><span class="tick">✔</span> Process</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q11</div>
+      <div class="question">Memory info is in:</div>
+      <div class="answer"><span class="tick">✔</span> /proc/meminfo</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q12</div>
+      <div class="question">What is a "Critical Section"?</div>
+      <div class="answer"><span class="tick">✔</span> A segment of code where shared resources are accessed.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q13</div>
+      <div class="question">What is a "Trap" (or software interrupt) in the context of system calls?</div>
+      <div class="answer"><span class="tick">✔</span> A mechanism used by a process to intentionally switch control to the Kernel.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q14</div>
+      <div class="question">In a virtual address, the offset depends on:</div>
+      <div class="answer"><span class="tick">✔</span> Page size</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q15</div>
+      <div class="question">A process is executing a complex sorting algorithm on a large array entirely in memory without performing any I/O or system calls. How will the CPU time be categorized?</div>
+      <div class="answer"><span class="tick">✔</span> High user time, near-zero sys time</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q16</div>
+      <div class="question">What is the return value of fork() in the child process?</div>
+      <div class="answer"><span class="tick">✔</span> 0</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q17</div>
+      <div class="question">In the Banker's Algorithm, if the Request from a process is greater than Available resources, what happens?</div>
+      <div class="answer"><span class="tick">✔</span> The process must wait until enough resources are released.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q18</div>
+      <div class="question">Fixed partitioning of memory leads to:</div>
+      <div class="answer"><span class="tick">✔</span> Internal fragmentation</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q19</div>
+      <div class="question">Which algorithm can lead to "Convoy Effect"?</div>
+      <div class="answer"><span class="tick">✔</span> FCFS</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q20</div>
+      <div class="question">Which scheduling algorithm is most likely to be used in a real-time OS?</div>
+      <div class="answer"><span class="tick">✔</span> Preemptive Priority</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q21</div>
+      <div class="question">Upon success, wait() returns:</div>
+      <div class="answer"><span class="tick">✔</span> PID of the terminated child</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q22</div>
+      <div class="question">What is the main advantage of Message Queues over Pipes?</div>
+      <div class="answer"><span class="tick">✔</span> They allow for asynchronous, formatted message passing with priorities.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q23</div>
+      <div class="question">Which of these is a drawback of the SSTF disk scheduling algorithm?</div>
+      <div class="answer"><span class="tick">✔</span> It can lead to starvation for distant requests, i.e reqs located far from current head position.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q24</div>
+      <div class="question">Pipes communicate through:</div>
+      <div class="answer"><span class="tick">✔</span> A Kernel buffer</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q25</div>
+      <div class="question">The use of wait() ensures:</div>
+      <div class="answer"><span class="tick">✔</span> Sequential execution (parent waits for child)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q26</div>
+      <div class="question">In a "Data Parallelism" model, how are tasks distributed?</div>
+      <div class="answer"><span class="tick">✔</span> The same operation is performed by multiple threads on different subsets of data.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q27</div>
+      <div class="question">Banker's algorithm ensures a Safe State, which means:</div>
+      <div class="answer"><span class="tick">✔</span> There exists a sequence of processes such that all can finish.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q28</div>
+      <div class="question">Which of the following describes "Demand Paging"?</div>
+      <div class="answer"><span class="tick">✔</span> Loading a page into memory only when it is needed.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q29</div>
+      <div class="question">Which CPU scheduling algorithm is objectively optimal in terms of minimizing the average waiting time for a given set of processes?</div>
+      <div class="answer"><span class="tick">✔</span> Shortest Job First (SJF)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q30</div>
+      <div class="question">Which tool would you use to see the "Symbol Table" of an object file?</div>
+      <div class="answer"><span class="tick">✔</span> nm</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q31</div>
+      <div class="question">In the Readers-Writers problem, if writers have priority, what occurs?</div>
+      <div class="answer"><span class="tick">✔</span> Readers may starve.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q32</div>
+      <div class="question">Which signal is sent by default when you use the kill command?</div>
+      <div class="answer"><span class="tick">✔</span> SIGTERM (15)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q33</div>
+      <div class="question">An Inverted Page Table has one entry for each:</div>
+      <div class="answer"><span class="tick">✔</span> Frame of physical memory</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q34</div>
+      <div class="question">In Paging, the logical address is divided into:</div>
+      <div class="answer"><span class="tick">✔</span> Page number and Page offset</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q35</div>
+      <div class="question">The fuser command is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Identify processes using files or sockets</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q36</div>
+      <div class="question">wait() is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Synchronize parent and child processes</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q37</div>
+      <div class="question">What is the purpose of "SPOOLing"?</div>
+      <div class="answer"><span class="tick">✔</span> To provide a buffer for data between devices with different data processing speeds.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q38</div>
+      <div class="question">Segmentation allows for "Sparse" address spaces. This means:</div>
+      <div class="answer"><span class="tick">✔</span> Large gaps can exist between segments without wasting physical memory.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q39</div>
+      <div class="question">SRTF (Shortest Remaining Time First) is:</div>
+      <div class="answer"><span class="tick">✔</span> Preemptive</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q40</div>
+      <div class="question">In the Bounded-Buffer problem using Semaphores, what is the purpose of the empty semaphore?</div>
+      <div class="answer"><span class="tick">✔</span> To represent the number of available (free) slots in the buffer and block the producer if the buffer is full.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q41</div>
+      <div class="question">Priority scheduling relies on:</div>
+      <div class="answer"><span class="tick">✔</span> Assigned Priority value</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q42</div>
+      <div class="question">FCFS (First Come First Served) is:</div>
+      <div class="answer"><span class="tick">✔</span> Non-preemptive</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q43</div>
+      <div class="question">Page size is typically measured in:</div>
+      <div class="answer"><span class="tick">✔</span> KB</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q44</div>
+      <div class="question">Which of the following is true for a hybrid system?</div>
+      <div class="answer"><span class="tick">✔</span> Segments are divided into pages.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q45</div>
+      <div class="question">Which tool is used for debugging programs?</div>
+      <div class="answer"><span class="tick">✔</span> gdb</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q46</div>
+      <div class="question">System time can be obtained in a C program using:</div>
+      <div class="answer"><span class="tick">✔</span> time()</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q47</div>
+      <div class="question">In a multitasking system, if a process's "Real Time" (wall-clock time) is 10 seconds, but its "User Time" is only 2 seconds and "Sys Time" is 1 second, what does the remaining 7 seconds most likely represent?</div>
+      <div class="answer"><span class="tick">✔</span> Time the process spent in the Ready or Blocked state (waiting for CPU or I/O).</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q48</div>
+      <div class="question">What is the primary advantage of combining segmentation with paging?</div>
+      <div class="answer"><span class="tick">✔</span> It eliminates external fragmentation while allowing logical grouping.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q49</div>
+      <div class="question">If the page table entry is not found (a "Page Table Miss"), the OS must:</div>
+      <div class="answer"><span class="tick">✔</span> Consult the disk for the page (Page Fault).</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q50</div>
+      <div class="question">What is the main drawback of an Inverted Page Table?</div>
+      <div class="answer"><span class="tick">✔</span> Searching the table for a specific page can be slow (requires hashing).</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q51</div>
+      <div class="question">To find the number of context switches for a specific process with PID 1234, which file should you check?</div>
+      <div class="answer"><span class="tick">✔</span> /proc/1234/sched (Both A and C)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q52</div>
+      <div class="question">What is Belady's Anomaly?</div>
+      <div class="answer"><span class="tick">✔</span> Page faults increase as frames increase.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q53</div>
+      <div class="question">Total system context switches count is located in /proc/stat under the label:</div>
+      <div class="answer"><span class="tick">✔</span> ctxt</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q54</div>
+      <div class="question">Waiting Time is defined as:</div>
+      <div class="answer"><span class="tick">✔</span> Turnaround Time - Burst Time</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q55</div>
+      <div class="question">A thread is often called a:</div>
+      <div class="answer"><span class="tick">✔</span> Lightweight process</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q56</div>
+      <div class="question">Why can't a user-mode process directly modify the Page Table?</div>
+      <div class="answer"><span class="tick">✔</span> To prevent the process from accessing memory belonging to other processes or the OS.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q57</div>
+      <div class="question">What information does the file command provide for an executable?</div>
+      <div class="answer"><span class="tick">✔</span> The architecture and whether it is dynamically linked.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q58</div>
+      <div class="question">Which of the following is an example of Internal Fragmentation?</div>
+      <div class="answer"><span class="tick">✔</span> Unused space within the last page of a process.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q59</div>
+      <div class="question">When a process is interrupted, where does the OS store its current state?</div>
+      <div class="answer"><span class="tick">✔</span> In the Process Control Block (PCB)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q60</div>
+      <div class="question">Running processes count is in:</div>
+      <div class="answer"><span class="tick">✔</span> /proc/loadavg</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q61</div>
+      <div class="question">nm shows:</div>
+      <div class="answer"><span class="tick">✔</span> Symbol table</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q62</div>
+      <div class="question">In the output of the Linux time command (e.g., real, user, sys), "sys" represents:</div>
+      <div class="answer"><span class="tick">✔</span> Time spent in the kernel on behalf of the process (system calls).</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q63</div>
+      <div class="question">execvp is most commonly used in conjunction with:</div>
+      <div class="answer"><span class="tick">✔</span> fork</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q64</div>
+      <div class="question">"Aging" is a technique used to solve the problem of:</div>
+      <div class="answer"><span class="tick">✔</span> Starvation in priority-based systems</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q65</div>
+      <div class="question">Under what condition does a cycle in a Wait-For Graph guarantee a deadlock?</div>
+      <div class="answer"><span class="tick">✔</span> Only if every resource type has exactly one instance.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q66</div>
+      <div class="question">A "Cow" (Copy-on-Write) mechanism in fork() is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Delay copying of memory pages until they are modified.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q67</div>
+      <div class="question">Can a pipe communicate between two unrelated processes?</div>
+      <div class="answer"><span class="tick">✔</span> No, only between processes with a common ancestor.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q68</div>
+      <div class="question">The wait() system call returns:</div>
+      <div class="answer"><span class="tick">✔</span> The PID of the child that terminated</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q69</div>
+      <div class="question">After a successful exec call, what happens to the old code?</div>
+      <div class="answer"><span class="tick">✔</span> It is completely replaced by the new program.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q70</div>
+      <div class="question">A Semaphore is essentially a:</div>
+      <div class="answer"><span class="tick">✔</span> Synchronization tool</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q71</div>
+      <div class="question">In /proc/[pid]/stat, the 14th and 15th fields usually represent:</div>
+      <div class="answer"><span class="tick">✔</span> User time and Kernel time</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q72</div>
+      <div class="question">The strings command extracts:</div>
+      <div class="answer"><span class="tick">✔</span> Printable characters</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q73</div>
+      <div class="question">Free memory is given in:</div>
+      <div class="answer"><span class="tick">✔</span> MemFree</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q74</div>
+      <div class="question">A Message Queue allows for:</div>
+      <div class="answer"><span class="tick">✔</span> Message passing</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q75</div>
+      <div class="question">What is the function of pthread_join()?</div>
+      <div class="answer"><span class="tick">✔</span> To wait for a specific thread to terminate.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q76</div>
+      <div class="question">Which page replacement algorithm is generally considered the benchmark for minimum page faults?</div>
+      <div class="answer"><span class="tick">✔</span> Optimal</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q77</div>
+      <div class="question">Where does the root of the pstree usually point?</div>
+      <div class="answer"><span class="tick">✔</span> systemd or init</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q78</div>
+      <div class="question">In the myadder exercise, why is execvp called after fork?</div>
+      <div class="answer"><span class="tick">✔</span> To let the child perform the task while the parent continues.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q79</div>
+      <div class="question">LRU page replacement replaces the:</div>
+      <div class="answer"><span class="tick">✔</span> Least recently used page</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q80</div>
+      <div class="question">When a process executes a system call, the CPU transitions from:</div>
+      <div class="answer"><span class="tick">✔</span> User Mode to Kernel Mode</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q81</div>
+      <div class="question">In the Banker's Algorithm, the Available vector represents:</div>
+      <div class="answer"><span class="tick">✔</span> Number of currently free units of each resource.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q82</div>
+      <div class="question">Using wait() in the parent process prevents the creation of:</div>
+      <div class="answer"><span class="tick">✔</span> Zombie processes</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q83</div>
+      <div class="question">In Disk Scheduling, what is "Total Head Movement"?</div>
+      <div class="answer"><span class="tick">✔</span> The sum of absolute differences between consecutive cylinder positions.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q84</div>
+      <div class="question">Which hardware component is responsible for translating logical addresses to physical addresses?</div>
+      <div class="answer"><span class="tick">✔</span> MMU (Memory Management Unit)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q85</div>
+      <div class="question">xxd is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Convert text to hex</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q86</div>
+      <div class="question">Thrashing occurs when:</div>
+      <div class="answer"><span class="tick">✔</span> A process spends more time paging than executing.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q87</div>
+      <div class="question">Which of the following is NOT a requirement to solve the Critical Section problem?</div>
+      <div class="answer"><span class="tick">✔</span> Spin-Locking</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q88</div>
+      <div class="question">Which flag in shmget is used to create a new segment and fail if it already exists?</div>
+      <div class="answer"><span class="tick">✔</span> IPC_EXCL</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q89</div>
+      <div class="question">In a Many-to-One threading model, what happens if a single thread makes a blocking system call?</div>
+      <div class="answer"><span class="tick">✔</span> The entire process blocks, because the kernel is unaware of the individual user threads.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q90</div>
+      <div class="question">In the Dining Philosophers problem, what happens if every philosopher picks up their left chopstick simultaneously?</div>
+      <div class="answer"><span class="tick">✔</span> A Deadlock occurs (Circular Wait).</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q91</div>
+      <div class="question">Threads within the same process share:</div>
+      <div class="answer"><span class="tick">✔</span> Address space (Memory)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q92</div>
+      <div class="question">Which process does the wait() call block?</div>
+      <div class="answer"><span class="tick">✔</span> The Parent</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q93</div>
+      <div class="question">What happens to the TLB during a context switch between two different processes?</div>
+      <div class="answer"><span class="tick">✔</span> It is usually flushed (cleared)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q94</div>
+      <div class="question">In objdump, which flag is used to disassemble the executable sections of a binary?</div>
+      <div class="answer"><span class="tick">✔</span> -d</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q95</div>
+      <div class="question">execvp requires which of the following as its first argument?</div>
+      <div class="answer"><span class="tick">✔</span> Program name/path</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q96</div>
+      <div class="question">Time spent by a process in User Mode is stored in /proc/[pid]/stat as:</div>
+      <div class="answer"><span class="tick">✔</span> utime</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q97</div>
+      <div class="question">The od -x command stands for:</div>
+      <div class="answer"><span class="tick">✔</span> Octal Dump (in Hexadecimal format)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q98</div>
+      <div class="question">Which disk scheduling algorithm is also known as the "Elevator Algorithm"?</div>
+      <div class="answer"><span class="tick">✔</span> SCAN</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q99</div>
+      <div class="question">To prevent deadlock in Dining Philosophers, one solution is:</div>
+      <div class="answer"><span class="tick">✔</span> All of the above.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q100</div>
+      <div class="question">Which library is used for multithreading in Linux C programming?</div>
+      <div class="answer"><span class="tick">✔</span> pthread.h</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q101</div>
+      <div class="question">The file command determines:</div>
+      <div class="answer"><span class="tick">✔</span> File type</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q102</div>
+      <div class="question">What is the primary goal of the "Dispatcher" during a context switch?</div>
+      <div class="answer"><span class="tick">✔</span> To give control of the CPU to the selected process</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q103</div>
+      <div class="question">In the formula for physical address calculation, Physical Address = (Frame Number * Page Size) + Offset. What is the 'offset' in physical address calculation?</div>
+      <div class="answer"><span class="tick">✔</span> The distance from the start of the page.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q104</div>
+      <div class="question">Time spent by a process in Kernel Mode is stored in /proc/[pid]/stat as:</div>
+      <div class="answer"><span class="tick">✔</span> stime</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q105</div>
+      <div class="question">A "Dirty Bit" in a page table is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Identify if a page has been modified since being loaded from disk.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q106</div>
+      <div class="question">Shared memory is fast because:</div>
+      <div class="answer"><span class="tick">✔</span> No data copying is required between user and kernel space.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q107</div>
+      <div class="question">Information for a specific process can be found in which directory?</div>
+      <div class="answer"><span class="tick">✔</span> /proc/[pid]</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q108</div>
+      <div class="question">Which system call is used to send a signal to a process in C?</div>
+      <div class="answer"><span class="tick">✔</span> kill()</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q109</div>
+      <div class="question">Disk scheduling primarily reduces:</div>
+      <div class="answer"><span class="tick">✔</span> Seek time</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q110</div>
+      <div class="question">When using execvp(prog, args), what should be the last element of the args array?</div>
+      <div class="answer"><span class="tick">✔</span> NULL</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q111</div>
+      <div class="question">What is the PID of the init (or systemd) process?</div>
+      <div class="answer"><span class="tick">✔</span> 1</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q112</div>
+      <div class="question">The execvp system call replaces:</div>
+      <div class="answer"><span class="tick">✔</span> The current Process image</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q113</div>
+      <div class="question">Which of the following statements is TRUE regarding the renice command in Linux?</div>
+      <div class="answer"><span class="tick">✔</span> It can alter the scheduling priority of one or more processes that are already running.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q114</div>
+      <div class="question">Round Robin (RR) scheduling uses:</div>
+      <div class="answer"><span class="tick">✔</span> Time quantum</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q115</div>
+      <div class="question">When using pipe(fd), fd[0] is for _____ and fd[1] is for _____.</div>
+      <div class="answer"><span class="tick">✔</span> Read, Write</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q116</div>
+      <div class="question">Which command traces system calls?</div>
+      <div class="answer"><span class="tick">✔</span> strace</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q117</div>
+      <div class="question">Virtual Memory allows for:</div>
+      <div class="answer"><span class="tick">✔</span> Execution of processes larger than physical memory.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q118</div>
+      <div class="question">FIFO page replacement replaces the:</div>
+      <div class="answer"><span class="tick">✔</span> Oldest page in memory</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q119</div>
+      <div class="question">/proc is best described as a:</div>
+      <div class="answer"><span class="tick">✔</span> Virtual filesystem</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q120</div>
+      <div class="question">What is the return value of fork() in the parent process?</div>
+      <div class="answer"><span class="tick">✔</span> PID of the child</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q121</div>
+      <div class="question">Which command shows running processes?</div>
+      <div class="answer"><span class="tick">✔</span> ps (and top)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q122</div>
+      <div class="question">Which call attaches a shared memory segment to a process's address space?</div>
+      <div class="answer"><span class="tick">✔</span> shmat</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q123</div>
+      <div class="question">What is the primary advantage of combining segmentation with paging?</div>
+      <div class="answer"><span class="tick">✔</span> It eliminates external fragmentation while allowing logical grouping.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q124</div>
+      <div class="question">Total execution time of a process is generally the sum of:</div>
+      <div class="answer"><span class="tick">✔</span> user + kernel time</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q125</div>
+      <div class="question">What is the fundamental difference between "Parallelism" and "Concurrency"?</div>
+      <div class="answer"><span class="tick">✔</span> Concurrency is interleaving; Parallelism is simultaneous execution.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q126</div>
+      <div class="question">Deadlock requires which of the following conditions?</div>
+      <div class="answer"><span class="tick">✔</span> All of the Above (Mutual exclusion, Hold & wait, Circular wait, No preemption)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q127</div>
+      <div class="question">In a pipe, if the read end is closed and a process tries to write to it:</div>
+      <div class="answer"><span class="tick">✔</span> The process receives a SIGPIPE signal.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q128</div>
+      <div class="question">The pstree command shows:</div>
+      <div class="answer"><span class="tick">✔</span> Process tree</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q129</div>
+      <div class="question">In the Dining Philosophers problem, what does a philosopher represent?</div>
+      <div class="answer"><span class="tick">✔</span> A process/thread</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q130</div>
+      <div class="question">Which system call is used to control or remove a message queue (IPC_RMI)?</div>
+      <div class="answer"><span class="tick">✔</span> msgctl</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q131</div>
+      <div class="question">The number of processes forked since bootup is found in:</div>
+      <div class="answer"><span class="tick">✔</span> processes</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q132</div>
+      <div class="question">If a system has 10 units of a resource and 3 processes each need a maximum of 4 units, can a deadlock occur?</div>
+      <div class="answer"><span class="tick">✔</span> No, the system is always safe.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q133</div>
+      <div class="question">Which of the following system calls does NOT return to the calling process if successful?</div>
+      <div class="answer"><span class="tick">✔</span> execvp()</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q134</div>
+      <div class="question">What is the primary difference between Paging and Segmentation?</div>
+      <div class="answer"><span class="tick">✔</span> Paging allows internal fragmentation; Segmentation allows external fragmentation. Segmentation uses variable-size blocks; Paging uses fixed-size blocks.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q135</div>
+      <div class="question">Locality of Reference supports the effectiveness of:</div>
+      <div class="answer"><span class="tick">✔</span> Paging and Caching</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q136</div>
+      <div class="question">Which of the following remains the same after an exec() call?</div>
+      <div class="answer"><span class="tick">✔</span> PID (Process ID)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q137</div>
+      <div class="question">In the Readers-Writers problem, which primitive allows multiple readers but one writer?</div>
+      <div class="answer"><span class="tick">✔</span> A combination of Mutexes and a read_count variable.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q138</div>
+      <div class="question">The fuser -k command is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Kill processes using a specific file/socket.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q139</div>
+      <div class="question">Optimal page replacement replaces the page that:</div>
+      <div class="answer"><span class="tick">✔</span> Will not be used for the longest time in the future</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q140</div>
+      <div class="question">CPU cores info is in:</div>
+      <div class="answer"><span class="tick">✔</span> /proc/cpuinfo</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q141</div>
+      <div class="question">Turnaround Time is defined as:</div>
+      <div class="answer"><span class="tick">✔</span> Completion Time - Arrival Time (also = Waiting Time + Burst Time)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q142</div>
+      <div class="question">In a combined Segmentation/Paging system, the logical address is divided into:</div>
+      <div class="answer"><span class="tick">✔</span> Segment number, Page number, and Offset</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q143</div>
+      <div class="question">In C-LOOK scheduling, after reaching the last request in one direction, the head:</div>
+      <div class="answer"><span class="tick">✔</span> Returns to the first request at the other end without servicing anything in between.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q144</div>
+      <div class="question">objdump is used to:</div>
+      <div class="answer"><span class="tick">✔</span> Dump object file contents</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q145</div>
+      <div class="question">What is the formula for the 'Need' matrix in the Banker's Algorithm?</div>
+      <div class="answer"><span class="tick">✔</span> Need = Max - Allocation</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q146</div>
+      <div class="question">Why is a context switch considered 'pure overhead'?</div>
+      <div class="answer"><span class="tick">✔</span> The OS does no useful 'user work' during the switch</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q147</div>
+      <div class="question">Why do we use multi-level page tables?</div>
+      <div class="answer"><span class="tick">✔</span> To reduce the amount of physical memory occupied by the page table itself.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q148</div>
+      <div class="question">What is the primary difference between SCAN and LOOK disk scheduling?</div>
+      <div class="answer"><span class="tick">✔</span> SCAN goes to the disk edge; LOOK only goes to the last request.</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q149</div>
+      <div class="question">A standard Linux Pipe is:</div>
+      <div class="answer"><span class="tick">✔</span> Unidirectional (Half-duplex)</div>
+    </div>
+    <div class="card">
+      <div class="qnum">Q150</div>
+      <div class="question">What is a "Zombie" process?</div>
+      <div class="answer"><span class="tick">✔</span> A process that has been killed but its entry remains in the process table.</div>
+    </div>
+</div>
+<footer>OS Answer Key — 150 Q&amp;A pairs</footer>
+<script>
+function filterCards(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const cards=document.querySelectorAll('.card');
+  let vis=0;
+  cards.forEach(c=>{
+    const txt=c.textContent.toLowerCase();
+    if(txt.includes(q)){c.classList.remove('hidden');vis++;}
+    else c.classList.add('hidden');
+  });
+  document.getElementById('count').textContent=`Showing ${vis} of 150 questions`;
+}
+</script>
+</body>
+</html>
